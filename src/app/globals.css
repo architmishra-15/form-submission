@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 59 130 246;
+  --primary-foreground: 248 250 252;
+  --secondary: 20 184 166;
+  --secondary-foreground: 248 250 252;
+  --accent: 249 115 22;
+  --accent-foreground: 248 250 252;
+  --success: 34 197 94;
+  --success-foreground: 248 250 252;
+  --warning: 234 179 8;
+  --warning-foreground: 248 250 252;
+  --error: 239 68 68;
+  --error-foreground: 248 250 252;
+  --muted: 226 232 240;
+  --muted-foreground: 100 116 139;
+  --background: 248 250 252;
+  --foreground: 15 23 42;
+  --card: 255 255 255;
+  --card-foreground: 15 23 42;
+  --border: 226 232 240;
+  --ring: 59 130 246;
+}
+
+.dark {
+  --primary: 59 130 246;
+  --primary-foreground: 248 250 252;
+  --secondary: 20 184 166;
+  --secondary-foreground: 248 250 252;
+  --accent: 249 115 22;
+  --accent-foreground: 248 250 252;
+  --success: 34 197 94;
+  --success-foreground: 248 250 252;
+  --warning: 234 179 8;
+  --warning-foreground: 248 250 252;
+  --error: 239 68 68;
+  --error-foreground: 248 250 252;
+  --muted: 51 65 85;
+  --muted-foreground: 148 163 184;
+  --background: 15 23 42;
+  --foreground: 248 250 252;
+  --card: 30 41 59;
+  --card-foreground: 248 250 252;
+  --border: 51 65 85;
+  --ring: 59 130 246;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  @apply bg-background text-foreground antialiased transition-colors duration-300;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+@layer components {
+  .form-input {
+    @apply w-full rounded-md border border-border bg-card px-4 py-3 text-card-foreground shadow-sm 
+    transition-colors duration-200 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-foreground mb-1;
+  }
+  
+  .form-error {
+    @apply text-sm text-error mt-1 animate-slideDown;
+  }
+  
+  .button {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors 
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none 
+    disabled:opacity-50 h-11 px-4;
+  }
+  
+  .button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+  
+  .button-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
+  }
+  
+  .button-ghost {
+    @apply bg-transparent text-foreground hover:bg-muted/50;
+  }
+  
+  .animate-slideDown {
+    animation: slideDown 0.2s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .animate-pulse {
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+} 

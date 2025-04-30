@@ -1,0 +1,41 @@
+{
+  "name": "interest-connect",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:prod": "next build && node scripts/obfuscate.js",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "firebase": "^10.14.1",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.3.2",
+    "framer-motion": "^11.2.18",
+    "install": "^0.13.0",
+    "lucide-react": "^0.344.0",
+    "next": "^14.1.0",
+    "next-themes": "^0.4.6",
+    "npm": "^11.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.56.1",
+    "sonner": "^1.7.4",
+    "zod": "^3.24.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.20",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.18",
+    "eslint": "^9.9.1",
+    "eslint-config-next": "14.1.0",
+    "javascript-obfuscator": "^4.1.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.5.3"
+  }
+}
