@@ -6,7 +6,7 @@ import './globals.css'
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Feedback Form',
+  title: 'Form',
   description: 'Submit your feedback securely',
 }
 
